@@ -1,0 +1,87 @@
+[
+{
+authorId: 1,
+text: 'What language to learn',
+activities: [
+{
+userId: 3,
+text: 'Learn Javascript!'
+},
+{
+userId: 2,
+text: 'Learn PHP!'
+},
+{
+userId: 4,
+text: 'Learn PHP!'
+},
+{
+userId: 5,
+text: 'Learn PHP!'
+},
+{
+userId: 6,
+text: 'Learn PHP!'
+}
+],
+discussions: 5,
+peers: 2,
+conversations: 1
+},
+
+{
+authorId: 2,
+text: 'Is this work?',
+activities: [
+{
+userId: 1,
+text: 'Yes, it work good!'
+},
+{
+userId: 4,
+text: 'Nop :('
+}
+],
+discussions: 3,
+peers: 4,
+conversations: 2
+},
+
+{
+authorId: 3,
+text: 'Its tea time?',
+activities: [
+{
+userId: 1,
+text: 'Yes, it work good!'
+},
+{
+userId: 2,
+text: 'Nop :('
+},
+{
+userId: 4,
+text: 'Nop :('
+},
+{
+userId: 5,
+text: 'Nop :('
+},
+{
+userId: 6,
+text: 'Nop :('
+},
+{
+userId: 1,
+text: 'Nop :('
+},
+{
+userId: 2,
+text: 'Nop :('
+}
+],
+discussions: 1,
+peers: 1,
+conversations: 2
+}
+];

@@ -1,0 +1,90 @@
+<div class="profile-wrapper">
+    <div ng-click="profile.closeProfile()" class="close-profile">x</div>
+    <div class="profile-header">
+        <img class="profile-photo" ng-src="{{profile.users[profile.userToShow].userPhoto}}" >
+        <div class="profile-name">{{profile.users[profile.userToShow].username}}</div>
+        <div class="profile-activity">
+            <h3>MEMBER FOR <span>{{profile.users[profile.userToShow].memberFor}}</span> {{}}</h3>
+            <h3>LAST SEEN <span>{{profile.users[profile.userToShow].lastSeen}}</span> {{}}</h3>
+            <h3>ACTIVITY LEVEL <span></span> {{}}</h3>
+        </div>
+    </div>
+
+    <div class="profile-content">
+        <div class="profile-navigation">
+            <div class="prev-profile change-profile"> < </div>
+            <h2>How it all started</h2>
+            <div class="next-profile change-profile"> > </div>
+        </div>
+        <h3>THAT'S WHERE WE HAVE BEEN THESE 5 MONTHS AGO</h3>
+        <div class="user-activity">
+            <div class="square">
+                <div>
+                    <div class="activity-count">{{}}46</div>
+                    <h4>peers</h4>
+                </div>
+            </div>
+            <div class="square">
+                <div>
+                    <div class="activity-count">{{}}19</div>
+                    <h4>discussions</h4>
+                </div>
+            </div>
+            <div class="square">
+                <div>
+                    <div class="activity-count">{{}}29</div>
+                    <h4>findings</h4>
+                </div>
+            </div>
+            <div class="square">
+                <div>
+                    <div class="activity-count">{{}}10</div>
+                    <h4>questions</h4>
+                </div>
+            </div>
+        </div>
+        <h3>WHO JOINED THE PLATFORM THAT SAME PERIOD</h3>
+        <div class="joined-block">
+            <div>
+                <div class="joined-square">
+                    <img ng-click="profile.showWho(1)" ng-src="{{profile.users[1].userPhoto}}" >
+                </div>
+                <div class="joined-name">
+                    {{}} S.E.N. Waweru
+                </div>
+            </div>
+            <div>
+                <div class="joined-square">
+                    <img ng-click="profile.showWho(0)"  ng-src="{{profile.users[0].userPhoto}}" >
+                </div>
+                <div class="joined-name">
+                    {{}} Patricia
+                </div>
+            </div>
+            <div>
+                <div  class="joined-square">
+                    <img ng-click="profile.showWho(2)" ng-src="{{profile.users[2].userPhoto}}" >
+                </div>
+                <div class="joined-name">
+                    {{}} Joseph Aluoch
+                </div>
+            </div>
+        </div>
+        <h3>THE HOTTEST DISCUSSION THESE DAYS</h3>
+    </div>
+
+    <div class="profile-footer">
+
+    </div>
+</div>
+<div class="profile-wrapper profile-footer">
+    <img ng-src="{{profile.users[2].userPhoto}}">
+    <div class="hot-author"><span>{{}}Andrew </span> FOUND THE GUARDIAN ARTICLE {{}}</div>
+    <div class="hot-question">{{}} Vegan diet to stop diabetes progress </div>
+    <div class="hot-activities">
+        <h4> {{}} <span>6 </span>peers involved</h4>
+        <h4> {{}} <span>3 </span>related discussion</h4>
+        <h4> {{}} <span>3 </span>conversations</h4>
+        <h4> {{}} <span>19 </span>upvotes</h4>
+    </div>
+</div>

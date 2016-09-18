@@ -1,0 +1,51 @@
+    <header>
+        <div class="header-center">
+            <div class="filter-bar">
+                <div class="logo">QUESTIONS</div>
+                <div class="add-question">+</div>
+                <div class="filter">
+                    <input type="radio" name="filter" value="My"> My shelf
+                    <input type="radio" name="filter" value="All"> All questions
+                </div>
+                <div class="sort">
+                    <span>Sort by</span> <div class="active-sort" ng-model="sort">recent</div> <span>or</span> <div ng-model="sort">hot</div>
+                </div>
+            </div>
+            <input placeholder="Type text to start search" ng-model="query">
+        </div>
+    </header>
+
+    <div class="question-block">
+        <div class="questions" ng-repeat="question in main.questions | filter: {text: query} | limitTo: main.limit">
+            <div class="left-bar">
+
+                <div class="top-bar">
+                    <img  ng-click="main.profile.showWho(0)" ng-src="images/{{question.authorId}}.jpg"/>
+                    <div class="question">
+                        <p><span>{{main.users[question.authorId-1].username}}</span> is asking</p>
+                        <h3>{{question.text}} ?</h3>
+                    </div>
+                </div>
+                <div class="bottom-bar">
+                    <div class="asked">
+                        <div>ASKED</div>
+                    </div>
+                    <div class="comments" >
+                        <div class="comment" ng-repeat="comment in question.activities | limitTo: 5">
+                            <img  ng-src="images/{{comment.userId}}.jpg" class="comment-photo">
+                            <div class="comment-status">COMMENTED</div>
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-bar">
+                <p>{{question.discussions}}  <span>related discussion</span></p>
+                <p>{{question.peers}}  <span>peer involved</span></p>
+                <p>{{question.conversations}}  <span>conversations</span></p>
+            </div>
+        </div>
+        <a href ng-click="main.incrementLimit()" class="load-more">load more questions</a>
+    </div>
+
