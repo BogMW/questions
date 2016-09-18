@@ -21,13 +21,14 @@
 
     app.controller("ProfileController", function () {
         this.users = users;
-        var show = 1;
+        var show = 0;
         this.showProfile = show; //Show popup or no
         var showProf = 0;
         this.userToShow = showProf; //Whos profile to show in popup
 
         this.showWho = function (userNumber) { //Change profile when clicked on another in profile
             this.userToShow = userNumber;
+            this.showProfile = 1;
         };
 
         this.closeProfile = function (){  // Close popup, when close button is clicked

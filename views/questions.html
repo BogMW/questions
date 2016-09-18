@@ -20,7 +20,7 @@
             <div class="left-bar">
 
                 <div class="top-bar">
-                    <img  ng-click="main.profile.showWho(0)" ng-src="images/{{question.authorId}}.jpg"/>
+                    <img  ng-click="profile.showWho(question.authorId-1)" ng-src="images/{{question.authorId}}.jpg"/>
                     <div class="question">
                         <p><span>{{main.users[question.authorId-1].username}}</span> is asking</p>
                         <h3>{{question.text}} ?</h3>
@@ -32,7 +32,7 @@
                     </div>
                     <div class="comments" >
                         <div class="comment" ng-repeat="comment in question.activities | limitTo: 5">
-                            <img  ng-src="images/{{comment.userId}}.jpg" class="comment-photo">
+                            <img ng-click="profile.showWho(comment.userId-1)" ng-src="images/{{comment.userId}}.jpg" class="comment-photo">
                             <div class="comment-status">COMMENTED</div>
                             <div class="circle"></div>
                         </div>

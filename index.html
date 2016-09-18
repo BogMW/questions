@@ -11,9 +11,10 @@
 </head>
 <body ng-controller="QuestionController as main">
 
-<div ng-show="1" ng-include="'views/questions.html'"></div>
-
-<div class="profile-popup" ng-controller="ProfileController as profile"  ng-show="profile.showProfile" ng-include="'views/profile.html'"></div>
+<div ng-controller="ProfileController as profile">
+    <div ng-show="1" ng-include="'views/questions.html'"></div>
+    <div class="profile-popup" ng-show="profile.showProfile" ng-include="'views/profile.html'"></div>
+</div>
 
 
 </body>
