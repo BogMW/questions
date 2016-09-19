@@ -1,0 +1,79 @@
+<div class="single-header">
+    <div ng-click="profile.backToQuestions()" class="back-to-questions">
+        <
+    </div>
+    <div>
+        <div>question</div>
+        <div>+</div>
+    </div>
+    <div>
+        Last time discussed {{}} <span>1</span> day ago
+    </div>
+</div>
+<div class="single-question-wrapper">
+    <div class="single-question">
+        <div class="single-author">
+            <div>
+                <img ng-src="{{profile.users[profile.questionToShow].userPhoto}}">
+                <div class="question">
+                    <p><span>{{profile.users[profile.questionToShow].username}}</span> is asking</p>
+                    <h3>{{profile.questions[profile.questionToShow].text}}</h3>
+                </div>
+            </div>
+            <div class="single-unfollow">
+                unfollow
+            </div>
+        </div>
+        <div class="single-text">
+            <div class="single-detail"> {{profile.questions[profile.questionToShow].detailed}} </div>
+            <div class="vote-count">{{profile.questions[profile.questionToShow].votes}} upvotes</div>
+            <div class="vote-change">
+                <div class="vote-up">▲</div>
+                <div class="vote-down">▼</div>
+            </div>
+        </div>
+        <div class="give-answer">
+            GIVE new answer
+        </div>
+    </div>
+    <h4>{{profile.questions[profile.questionToShow].activities.length}} peers already answerede {{profile.users[profile.questionToShow].username}}</h4>
+
+    <div class="single-answer-container" ng-repeat="answer in profile.questions[profile.questionToShow].activities">
+        <div class="single-answer">
+            <div class="answer-image-container">
+                <img ng-src="{{profile.users[answer.userId-1].userPhoto}}">
+            </div>
+            <div class="single-text">
+                <div class="single-detail"> {{profile.questions[profile.questionToShow].activities[$index].text}} </div>
+                <div class="vote-count">{{profile.questions[profile.questionToShow].activities[$index].votes}} upvotes</div>
+                <div class="vote-change">
+                    <div class="vote-up">▲</div>
+                    <div class="vote-down">▼</div>
+                </div>
+            </div>
+            <div class="give-answer">
+                COMMENT
+            </div>
+        </div>
+        <div class="single-comment-container" ng-repeat="comment in answer.comments">
+            <div class="single-comment">
+                <div class="comment-image-container">
+                    <img ng-src="{{profile.users[comment.authorId-1].userPhoto}}">
+                </div>
+                <div class="single-text">
+                    <div class="single-detail"> {{comment.text}}</div>
+                    <div class="vote-count">{{comment.votes}} upvotes</div>
+                    <div class="vote-change">
+                        <div class="vote-up">▲</div>
+                        <div class="vote-down">▼</div>
+                    </div>
+                </div>
+                <div class="give-comment">
+                    CONTINUE discussion
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
