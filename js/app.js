@@ -16,24 +16,49 @@
             this.limit += 1;
         };
 
+        var single = 1;
+        this.showSingle = single;
+
+
     });
 
 
     app.controller("ProfileController", function () {
         this.users = users;
+        this.questions = questions;
         var show = 0;
         this.showProfile = show; //Show popup or no
         var showProf = 0;
         this.userToShow = showProf; //Whos profile to show in popup
+        var showQuest = 0;
+        this.showQuestion = 0;
+        this.showAllQuestions = 1;
+        this.questionToShow = showQuest; //What question to show
+
+
+
 
         this.showWho = function (userNumber) { //Change profile when clicked on another in profile
             this.userToShow = userNumber;
             this.showProfile = 1;
         };
 
+        this.showWhat = function (questionNumber) { //Change profile when clicked on another in profile
+            this.questionToShow = questionNumber;
+            this.showQuestion = 1;
+            this.showAllQuestions = 0;
+
+        };
+
         this.closeProfile = function (){  // Close popup, when close button is clicked
             this.showProfile = 0;
         };
+
+        this.backToQuestions = function () {
+            this.showQuestion = 0;
+            this.showAllQuestions = 1;
+        }
+
     });
 
 
@@ -47,26 +72,45 @@ var questions = [
     {
       authorId: 1,
       text: 'What language to learn',
+      detailed: 'What language to learn, to be successful developer ?',
+      votes: 0,
       activities: [
           {
-            userId: 3,
-            text: 'Learn Javascript!'
+            userId: 2,
+            text: 'Learn Javascript!',
+            votes: 69,
+            comments: [
+                {
+                    authorId: 3,
+                    text:  'No no no, learn Java',
+                    votes: 1
+                },
+                {
+                    authorId: 5,
+                    text:  'Noooooo, learn PHP',
+                    votes: 0
+                }
+            ]
           },
           {
-            userId: 2,
-            text: 'Learn PHP!'
+            userId: 3,
+            text: 'Learn Java!',
+            votes: 0
           },
           {
               userId: 4,
-              text: 'Learn PHP!'
+              text: 'Learn PHP!',
+              votes: 0
           },
           {
               userId: 5,
-              text: 'Learn PHP!'
+              text: 'Learn PHP!',
+              votes: 0
           },
           {
               userId: 6,
-              text: 'Learn PHP!'
+              text: 'Learn PHP!',
+              votes: 0
           }
       ],
         discussions: 5,
@@ -77,6 +121,8 @@ var questions = [
     {
         authorId: 2,
         text: 'Is this work?',
+        detailed: 'Is this SPA with angular is work good? If not, say me!',
+        votes: 2,
         activities: [
             {
              userId: 1,
@@ -95,35 +141,9 @@ var questions = [
     {
         authorId: 3,
         text: 'Its tea time?',
+        detailed: 'Its tea time, or no? Nop, its time for beer :)',
+        votes: 99,
         activities: [
-            {
-                userId: 1,
-                text: 'Yes, it work good!'
-            },
-            {
-                userId: 2,
-                text: 'Nop :('
-            },
-            {
-                userId: 4,
-                text: 'Nop :('
-            },
-            {
-                userId: 5,
-                text: 'Nop :('
-            },
-            {
-                userId: 6,
-                text: 'Nop :('
-            },
-            {
-                userId: 1,
-                text: 'Nop :('
-            },
-            {
-                userId: 2,
-                text: 'Nop :('
-            }
         ],
         discussions: 1,
         peers: 1,
