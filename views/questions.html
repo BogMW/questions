@@ -3,12 +3,12 @@
             <div class="filter-bar">
                 <div class="logo">QUESTIONS</div>
                 <div class="add-question">+</div>
-                <div class="filter">
-                    <input type="radio" name="filter" value="My"> My shelf
-                    <input type="radio" name="filter" value="All"> All questions
+                <div  class="filter">
+                    <input ng-model="filter.name" type="radio" name="filter" value="2"> My shelf
+                    <input ng-model="filter.name" type="radio" name="filter" value=""> All questions
                 </div>
                 <div class="sort">
-                    <span>Sort by</span> <div class="active-sort" ng-model="sort">recent</div> <span>or</span> <div ng-model="sort">hot</div>
+                    <span>Sort by</span> <div class="active-sort" ng-click="main.setSort('date')">recent</div> <span>or</span> <div ng-click="main.setSort('votes')">hot</div>
                 </div>
             </div>
             <input placeholder="Type text to start search" ng-model="query">
@@ -16,7 +16,7 @@
     </header>
 
     <div class="question-block">
-        <div class="questions" ng-repeat="question in main.questions | filter: {text: query} | limitTo: main.limit">
+        <div class="questions" ng-repeat="question in main.questions | filter: {text: query, authorId: filter.name} | limitTo: main.limit | orderBy: main.sortBy" >
             <div class="left-bar">
                 <div class="top-bar">
                     <img  ng-click="profile.showWho(question.authorId-1)" ng-src="images/{{question.authorId}}.jpg"/>

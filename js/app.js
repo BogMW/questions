@@ -21,8 +21,17 @@
             }
         };
 
+
+        this.sortBy = 'votes';
+        this.setSort = function (option) {
+            this.sortBy = option;
+            console.log(this.sortBy);
+        };
+
         var single = 1;
         this.showSingle = single;
+
+
 
             });
 
@@ -101,6 +110,7 @@ var questions = [
       text: 'What language to learn',
       detailed: 'What language to learn, to be successful developer ?',
       votes: 0,
+      date: '2012-01-26',
       activities: [
           {
             userId: 2,
@@ -150,6 +160,7 @@ var questions = [
         text: 'Is this work?',
         detailed: 'Is this SPA with angular is work good? If not, say me!',
         votes: 2,
+        date: '2011-01-26',
         activities: [
             {
              userId: 1,
@@ -172,6 +183,7 @@ var questions = [
         text: 'Its tea time?',
         detailed: 'Its tea time, or no? Nop, its time for beer :)',
         votes: 99,
+        date: '2013-01-26',
         activities: [
         ],
         discussions: 1,
