@@ -47,6 +47,7 @@ header {
 }
 .filter-bar div{
     display: inline-block;
+    line-height: 25px;
 }
 .sort span {
     font-style: italic;
@@ -99,9 +100,11 @@ header {
 .question {
     display: inline-block;
     vertical-align: top;
+    margin-top: 30px;
 }
 .question p {
     line-height: 14px;
+    margin-bottom: 10px;
 }
 .question p span {
     color: #0266b3;
@@ -194,7 +197,7 @@ header {
     font-style: italic;
 }
 .load-more {
-    width: 770px;
+    width: 800px;
     color: #dc44a0;
     font-weight: bold;
     height: 90px;
@@ -202,6 +205,7 @@ header {
     background-color: white;
     margin: 2px auto;
     padding-left: 30px;
+    cursor: pointer;
 }
 /* QUESTIONS BLOCK */
 
@@ -213,7 +217,7 @@ header {
     font-size: 16px;
     font-weight:bold;
     position: absolute;
-    left: 820px;
+    left: 780px;
     top: 15px;
     color: #898b9c;
     cursor: pointer;
@@ -228,7 +232,7 @@ header {
     top: 0;
 }
 .profile-wrapper {
-    width: 600px;
+    width: 800px;
     background-color: white;
     margin: 0 auto;
     padding: 50px 125px;
@@ -514,18 +518,40 @@ h4 {
 /*Single question part*/
 
 .back-to-questions {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
+    border: 1px solid #b1b3b6;
+    background-color: white;
     font-size: 24px;
     font-weight: bold;
+    text-align: center;
+    line-height: 40px;
     cursor: pointer;
+    position: fixed;
+    left: 20px;
+    top: 10px;
+}
+
+.single-header-wrapper {
+    width: 800px;
+    margin: 0 auto;
 }
 
 .single-header {
     width: 100%;
     display: inline-flex;
     justify-content: space-between;
+    padding-top: 25px;
+    padding-bottom: 20px;
+}
+
+.single-header h3 {
+    line-height: 25px;
+}
+
+.single-header>div>div {
+    display: inline-block;
 }
 
 .single-question-wrapper {
