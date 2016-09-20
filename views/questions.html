@@ -18,12 +18,11 @@
     <div class="question-block">
         <div class="questions" ng-repeat="question in main.questions | filter: {text: query} | limitTo: main.limit">
             <div class="left-bar">
-
                 <div class="top-bar">
                     <img  ng-click="profile.showWho(question.authorId-1)" ng-src="images/{{question.authorId}}.jpg"/>
-                    <div class="question">
+                    <div ng-click="profile.showWhat($index)" class="question">
                         <p><span>{{main.users[question.authorId-1].username}}</span> is asking</p>
-                        <h3 ng-click="profile.showWhat($index)">{{question.text}} ?</h3>
+                        <h3>{{question.text}} ?</h3>
                     </div>
                 </div>
                 <div class="bottom-bar">

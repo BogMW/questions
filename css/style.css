@@ -41,6 +41,7 @@ header {
     border-radius: 50%;
     background-color: #0266b3;
     margin-right: 160px;
+    cursor: pointer;
 }
 .filter {
     margin-right: 60px;
@@ -101,6 +102,7 @@ header {
     display: inline-block;
     vertical-align: top;
     margin-top: 30px;
+    cursor: pointer;
 }
 .question p {
     line-height: 14px;
