@@ -46,6 +46,6 @@
                 <p>{{question.conversations}}  <span>conversations</span></p>
             </div>
         </div>
-        <div ng-click="main.incrementLimit()" class="load-more">load more questions</div>
+        <div ng-click="main.incrementLimit()" ng-show="main.isShown" class="load-more">load more questions</div>
     </div>
 

@@ -12,13 +12,17 @@
 
         var limitStep = 1;
         this.limit = limitStep;
+        var showLoadMore =1;
+        this.isShown = showLoadMore;
         this.incrementLimit = function () {
             this.limit += 1;
+            if (this.limit >= questions.length) {
+                this.isShown = 0;
+            }
         };
 
         var single = 1;
         this.showSingle = single;
-
 
     });
 
@@ -34,8 +38,6 @@
         this.showQuestion = 0;
         this.showAllQuestions = 1;
         this.questionToShow = showQuest; //What question to show
-
-
 
 
         this.showWho = function (userNumber) { //Change profile when clicked on another in profile
