@@ -30,8 +30,8 @@
             <div class="single-detail"> {{profile.questions[profile.questionToShow].detailed}} </div>
             <div class="vote-count">{{profile.questions[profile.questionToShow].votes}} upvotes</div>
             <div class="vote-change">
-                <div class="vote-up">▲</div>
-                <div class="vote-down">▼</div>
+                <div ng-click="profile.questionVoteUp(profile.questionToShow)" class="vote-up">▲</div>
+                <div ng-click="profile.questionVoteDown(profile.questionToShow)" class="vote-down">▼</div>
             </div>
         </div>
         <div class="give-answer">
@@ -49,8 +49,8 @@
                 <div class="single-detail"> {{profile.questions[profile.questionToShow].activities[$index].text}} </div>
                 <div class="vote-count">{{profile.questions[profile.questionToShow].activities[$index].votes}} upvotes</div>
                 <div class="vote-change">
-                    <div class="vote-up">▲</div>
-                    <div class="vote-down">▼</div>
+                    <div ng-click="profile.answerVoteUp(profile.questionToShow, $index)" class="vote-up">▲</div>
+                    <div ng-click="profile.answerVoteDown(profile.questionToShow, $index)" class="vote-down">▼</div>
                 </div>
             </div>
             <div class="give-answer" ng-show="!answer.comments.length">
@@ -66,8 +66,8 @@
                     <div class="single-detail"> {{comment.text}}</div>
                     <div class="vote-count">{{comment.votes}} upvotes</div>
                     <div class="vote-change">
-                        <div class="vote-up">▲</div>
-                        <div class="vote-down">▼</div>
+                        <div ng-click="profile.commentVoteUp(profile.questionToShow, $parent.$index ,$index)" class="vote-up">▲</div>
+                        <div ng-click="profile.commentVoteDown(profile.questionToShow, $parent.$index ,$index)" class="vote-down">▼</div>
                     </div>
                 </div>
                 <div class="give-comment" ng-show="$last">

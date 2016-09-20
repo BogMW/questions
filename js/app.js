@@ -7,7 +7,7 @@
 
 
     app.controller("QuestionController", function () {
-       this.users = users;
+        this.users = users;
         this.questions = questions;
 
         var limitStep = 1;
@@ -24,7 +24,7 @@
         var single = 1;
         this.showSingle = single;
 
-    });
+            });
 
 
     app.controller("ProfileController", function () {
@@ -59,7 +59,32 @@
         this.backToQuestions = function () {
             this.showQuestion = 0;
             this.showAllQuestions = 1;
-        }
+        };
+
+        this.questionVoteUp = function (questionId) {
+            questions[questionId].votes += 1;
+
+        };
+        this.questionVoteDown = function (questionId) {
+            questions[questionId].votes -= 1;
+
+        };
+
+        this.answerVoteUp = function (questionId, answerId) {
+            questions[questionId].activities[answerId].votes += 1;
+        };
+        this.answerVoteDown = function (questionId, answerId) {
+            questions[questionId].activities[answerId].votes -= 1;
+        };
+
+        this.commentVoteUp = function (questionId, answerId, commentId) {
+            questions[questionId].activities[answerId].comments[commentId].votes += 1;
+        };
+        this.commentVoteDown = function (questionId, answerId, commentId) {
+            questions[questionId].activities[answerId].comments[commentId].votes -= 1;
+        };
+
+
 
     });
 
@@ -128,11 +153,13 @@ var questions = [
         activities: [
             {
              userId: 1,
-             text: 'Yes, it work good!'
+             text: 'Yes, it work good!',
+                votes: 0
             },
             {
              userId: 4,
-             text: 'Nop :('
+             text: 'Nop :(',
+                votes: 0
             }
         ],
         discussions: 3,

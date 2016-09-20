@@ -634,6 +634,7 @@ h4 {
 .vote-up, .vote-down {
     font-size: 20px;
     color: #0266b3;
+    cursor: pointer;
 }
 
 .give-answer {
