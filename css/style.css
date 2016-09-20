@@ -598,6 +598,7 @@ h4 {
     width: 89%;
     margin-left: 11%;
     height: 100%;
+    min-height: 90px;
     background-color: white;
 }
 
@@ -641,7 +642,7 @@ h4 {
     font-weight: bold;
     font-size: 14px;
     cursor: pointer;
-    bottom: -19px;
+    bottom: -16px;
     width: 185px;
     text-align: center;
     left: 315px;
@@ -654,13 +655,14 @@ h4 {
 
 .single-answer {
     width: 800px;
-    margin: 0 auto;
+    margin: 1px auto;
     font-size: 0;
     position: relative;
 }
 .single-answer-container .single-text {
     width: 89%;
     vertical-align: top;
+    min-height: 90px;
 }
 
 .single-answer>div:nth-child(1), .single-answer>div:nth-child(2), .single-comment>div:nth-child(1), .single-comment>div:nth-child(2)  {
@@ -689,7 +691,7 @@ h4 {
 
 .single-comment {
     width: 712px;
-    margin: 0 0 0 auto;
+    margin: 0 0 1px auto;
     font-size: 0;
     position: relative;
 
@@ -710,6 +712,7 @@ h4 {
 .single-comment .single-text{
     width: 88%;
     vertical-align: top;
+    min-height: 90px;
 }
 
 .give-comment {

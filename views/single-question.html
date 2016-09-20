@@ -53,7 +53,7 @@
                     <div class="vote-down">▼</div>
                 </div>
             </div>
-            <div class="give-answer">
+            <div class="give-answer" ng-show="!answer.comments.length">
                 COMMENT
             </div>
         </div>
@@ -70,12 +70,11 @@
                         <div class="vote-down">▼</div>
                     </div>
                 </div>
-                <div class="give-comment">
+                <div class="give-comment" ng-show="$last">
                     CONTINUE discussion
                 </div>
             </div>
         </div>
-
 
     </div>
 </div>
