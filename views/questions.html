@@ -4,8 +4,10 @@
                 <div class="logo">QUESTIONS</div>
                 <div class="add-question">+</div>
                 <div  class="filter">
-                    <input ng-model="filter.name" type="radio" name="filter" value="2"> My shelf
-                    <input ng-model="filter.name" type="radio" name="filter" value=""> All questions
+                    <input ng-model="filter.name" type="radio" name="filter" value="2" id="filter1">
+                    <label for="filter1">My shelf</label>
+                    <input ng-model="filter.name" type="radio" name="filter" value="" id="filter2">
+                    <label for="filter2">All questions</label>
                 </div>
                 <div class="sort">
                     <span>Sort by</span> <div class="active-sort" ng-click="main.setSort('date')">recent</div> <span>or</span> <div ng-click="main.setSort('votes')">hot</div>
@@ -22,7 +24,7 @@
                     <img  ng-click="profile.showWho(question.authorId-1)" ng-src="images/{{question.authorId}}.jpg"/>
                     <div ng-click="profile.showWhat($index)" class="question">
                         <p><span>{{main.users[question.authorId-1].username}}</span> is asking</p>
-                        <h3>{{question.text}} ?</h3>
+                        <div>{{question.text}} ?</div>
                     </div>
                 </div>
                 <div class="bottom-bar">
@@ -30,8 +32,8 @@
                         <div>ASKED</div>
                     </div>
                     <div class="comments" >
-                        <div class="comment" ng-repeat="comment in question.activities | limitTo: 5">
-                            <img ng-click="profile.showWho(comment.userId-1)" ng-src="images/{{comment.userId}}.jpg" class="comment-photo">
+                        <div ng-click="profile.showWho(comment.userId-1)" class="comment" ng-repeat="comment in question.activities | limitTo: 5">
+                            <img  ng-src="images/{{comment.userId}}.jpg" class="comment-photo">
                             <div class="comment-status">COMMENTED</div>
                             <div class="circle"></div>
                         </div>

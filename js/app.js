@@ -21,7 +21,6 @@
             }
         };
 
-
         this.sortBy = 'votes';
         this.setSort = function (option) {
             this.sortBy = option;
@@ -31,7 +30,7 @@
         var single = 1;
         this.showSingle = single;
 
-
+        this.overflow = 'overflowYes';
 
             });
 

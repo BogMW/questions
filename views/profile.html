@@ -45,25 +45,25 @@
         </div>
         <h3>WHO JOINED THE PLATFORM THAT SAME PERIOD</h3>
         <div class="joined-block">
-            <div>
+            <div ng-click="profile.showWho(1)">
                 <div class="joined-square">
-                    <img ng-click="profile.showWho(1)" ng-src="{{profile.users[1].userPhoto}}" >
+                    <img  ng-src="{{profile.users[1].userPhoto}}" >
                 </div>
                 <div class="joined-name">
                     {{}} S.E.N. Waweru
                 </div>
             </div>
-            <div>
+            <div ng-click="profile.showWho(0)"  >
                 <div class="joined-square">
-                    <img ng-click="profile.showWho(0)"  ng-src="{{profile.users[0].userPhoto}}" >
+                    <img ng-src="{{profile.users[0].userPhoto}}" >
                 </div>
                 <div class="joined-name">
                     {{}} Patricia
                 </div>
             </div>
-            <div>
+            <div ng-click="profile.showWho(2)" >
                 <div  class="joined-square">
-                    <img ng-click="profile.showWho(2)" ng-src="{{profile.users[2].userPhoto}}" >
+                    <img ng-src="{{profile.users[2].userPhoto}}" >
                 </div>
                 <div class="joined-name">
                     {{}} Joseph Aluoch
