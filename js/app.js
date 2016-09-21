@@ -15,14 +15,23 @@
         var showLoadMore =1;
         this.isShown = showLoadMore;
         this.incrementLimit = function () {
-            this.limit += 1;
+            this.limit += 5;
             if (this.limit >= questions.length) {
                 this.isShown = 0;
             }
         };
+        this.recentActive = 'active-sort';
+        this.hotActive = '';
 
         this.sortBy = 'votes';
         this.setSort = function (option) {
+            if(option == 'date') {
+                this.recentActive = 'active-sort';
+                this.hotActive = '';
+            } else {
+                this.recentActive = '';
+                this.hotActive = 'active-sort';
+            }
             this.sortBy = option;
             console.log(this.sortBy);
         };
@@ -91,6 +100,8 @@
         this.commentVoteDown = function (questionId, answerId, commentId) {
             questions[questionId].activities[answerId].comments[commentId].votes -= 1;
         };
+
+
 
 
 

@@ -69,6 +69,7 @@ header {
 .sort div {
     color: #026eb3;
     font-weight: bold;
+    cursor: pointer;
 }
 .active-sort {
     color: #aab0af !important;
@@ -124,12 +125,14 @@ header {
 .question:hover {
     font-weight:bold;
 }
-.question p {
-    line-height: 14px;
+.question p, .single-detail p  {
+    line-height: 12px;
     margin-bottom: 10px;
+    text-transform: uppercase;
 }
-.question p span {
+.question p span, .single-detail p span {
     color: #0266b3;
+    font-size: 16px;
 }
 .question div {
     color: #0266b3;
@@ -635,7 +638,7 @@ header {
 .single-answer .single-detail, .single-question .single-detail {
     font-size: 14px;
     width: 69%;
-    margin: 30px 40px 40px 20px;
+    margin: 20px 40px 30px 20px;
 }
 
 .vote-count {
@@ -723,7 +726,7 @@ header {
 .single-comment .single-detail {
     font-size: 14px;
     width: 65%;
-    margin: 30px 40px 40px 20px;
+    margin: 20px 40px 30px 20px;
 }
 
 .comment-image-container {
@@ -753,3 +756,8 @@ header {
 }
 
 /*Single question part*/
+
+
+@media screen and (max-width: 800px) {
+
+}

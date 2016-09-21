@@ -10,7 +10,7 @@
                     <label for="filter2">All questions</label>
                 </div>
                 <div class="sort">
-                    <span>Sort by</span> <div class="active-sort" ng-click="main.setSort('date')">recent</div> <span>or</span> <div ng-click="main.setSort('votes')">hot</div>
+                    <span>Sort by</span> <div class="{{main.recentActive}}" ng-click="main.setSort('date')">recent</div> <span>or</span> <div class="{{main.hotActive}}" ng-click="main.setSort('votes')">hot</div>
                 </div>
             </div>
             <input placeholder="Type text to start search" ng-model="query">
