@@ -28,11 +28,14 @@
         </div>
         <div class="single-text">
             <div class="single-detail"> {{profile.questions[profile.questionToShow].detailed}} </div>
-            <div class="vote-count">{{profile.questions[profile.questionToShow].votes}} upvotes</div>
-            <div class="vote-change">
-                <div ng-click="profile.questionVoteUp(profile.questionToShow)" class="vote-up">▲</div>
-                <div ng-click="profile.questionVoteDown(profile.questionToShow)" class="vote-down">▼</div>
+            <div class="vote-container">
+                <div class="vote-count">{{profile.questions[profile.questionToShow].votes}} upvotes</div>
+                <div class="vote-change">
+                    <div ng-click="profile.questionVoteUp(profile.questionToShow)" class="vote-up">▲</div>
+                    <div ng-click="profile.questionVoteDown(profile.questionToShow)" class="vote-down">▼</div>
+                </div>
             </div>
+
         </div>
         <div class="give-answer">
             GIVE new answer
@@ -50,10 +53,12 @@
                     <p><span>{{profile.users[answer.userId-1].username}}</span> COMMENTED IT - yesterday</p>
                     <div>{{profile.questions[profile.questionToShow].activities[$index].text}}</div>
                 </div>
-                <div class="vote-count">{{profile.questions[profile.questionToShow].activities[$index].votes}} upvotes</div>
-                <div class="vote-change">
-                    <div ng-click="profile.answerVoteUp(profile.questionToShow, $index)" class="vote-up">▲</div>
-                    <div ng-click="profile.answerVoteDown(profile.questionToShow, $index)" class="vote-down">▼</div>
+                <div class="vote-container">
+                    <div class="vote-count">{{profile.questions[profile.questionToShow].activities[$index].votes}} upvotes</div>
+                    <div class="vote-change">
+                        <div ng-click="profile.answerVoteUp(profile.questionToShow, $index)" class="vote-up"> ▲</div>
+                        <div ng-click="profile.answerVoteDown(profile.questionToShow, $index)" class="vote-down"> ▼</div>
+                    </div>
                 </div>
             </div>
             <div class="give-answer" ng-show="!answer.comments.length">
@@ -70,10 +75,12 @@
                         <div>{{profile.users[comment.authorId-1].username}}</div>
                         <div>{{comment.text}}</div>
                     </div>
-                    <div class="vote-count">{{comment.votes}} upvotes</div>
-                    <div class="vote-change">
-                        <div ng-click="profile.commentVoteUp(profile.questionToShow, $parent.$index ,$index)" class="vote-up">▲</div>
-                        <div ng-click="profile.commentVoteDown(profile.questionToShow, $parent.$index ,$index)" class="vote-down">▼</div>
+                    <div class="vote-container">
+                        <div class="vote-count">{{comment.votes}} upvotes</div>
+                        <div class="vote-change">
+                            <div ng-click="profile.commentVoteUp(profile.questionToShow, $parent.$index ,$index)" class="vote-up"> ▲</div>
+                            <div ng-click="profile.commentVoteDown(profile.questionToShow, $parent.$index ,$index)" class="vote-down"> ▼</div>
+                        </div>
                     </div>
                 </div>
                 <div class="give-comment" ng-show="$last">

@@ -30,13 +30,21 @@ img:hover {
 /* All questions part */
 
 /* HEADER */
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+}
+
+
 header {
     width: 100%;
     padding-top: 25px;
     padding-bottom: 20px;
 }
 .header-center {
-    width: 800px;
+    width: 100%;
     margin: 0 auto;
 }
 .logo {
@@ -63,6 +71,8 @@ header {
     display: inline-block;
     line-height: 25px;
 }
+
+
 .sort span {
     font-style: italic;
 }
@@ -96,7 +106,7 @@ header {
 .questions {
     background-color: white;
     padding-bottom: 40px;
-    width: 800px;
+    width: 100%;
     margin: 2px auto;
     box-shadow: 0 0 5px 1px rgba(226, 226, 226, 0.5);
 }
@@ -224,7 +234,7 @@ header {
     font-style: italic;
 }
 .load-more {
-    width: 800px;
+    width: 100%;
     color: #dc44a0;
     font-weight: bold;
     height: 90px;
@@ -267,7 +277,7 @@ header {
     overflow: auto;
 }
 .profile-wrapper {
-    width: 800px;
+    width: 100%;
     background-color: white;
     margin: 0 auto;
     padding: 50px 125px;
@@ -559,7 +569,7 @@ header {
 }
 
 .single-header-wrapper {
-    width: 800px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -586,7 +596,7 @@ header {
 }
 
 .single-question {
-    width: 800px;
+    width: 100%;
     background-color: #dff3fd;
     margin: 0 auto;
     position: relative;
@@ -627,7 +637,7 @@ header {
     background-color: white;
 }
 
-.single-text>div {
+.single-text>div, .vote-container>div {
     display: inline-block;
 }
 
@@ -646,12 +656,15 @@ header {
     font-style: italic;
     margin-right: 30px;
     vertical-align: top;
-    margin-top: 35px;
+    margin-top: 15px;
+}
+
+.vote-container {
+    vertical-align: text-bottom;
 }
 
 .vote-change {
     vertical-align: top;
-    margin-top: 20px;
 }
 
 .vote-up, .vote-down {
@@ -671,7 +684,9 @@ header {
     bottom: -16px;
     width: 185px;
     text-align: center;
-    left: 315px;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 
 
@@ -680,15 +695,17 @@ header {
 }
 
 .single-answer {
-    width: 800px;
+    width: 100%;
+    background-color: white;
     margin: 1px auto;
     font-size: 0;
     position: relative;
 }
 .single-answer-container .single-text {
-    width: 89%;
+    width: calc(100% - 90px);
     vertical-align: top;
     min-height: 90px;
+    border-left:1px solid #fbfbfb ;
 }
 
 .single-answer>div:nth-child(1), .single-answer>div:nth-child(2), .single-comment>div:nth-child(1), .single-comment>div:nth-child(2)  {
@@ -698,9 +715,8 @@ header {
 }
 
 .answer-image-container {
-    width: 11%;
+    width: 90px;
     height: 100%;
-    border-right: 1px solid #fbfbfb;
 }
 
 .single-answer-container div img {
@@ -711,15 +727,18 @@ header {
     margin: 20px auto;
 }
 .single-comment-container {
-    width: 800px;
+    width: 100%;
     margin: 0 auto;
+    padding-left: 90px;
+
 }
 
 .single-comment {
-    width: 712px;
+    width: 100%;
     margin: 0 0 1px auto;
     font-size: 0;
     position: relative;
+    background-color: white;
 
 }
 
@@ -730,15 +749,15 @@ header {
 }
 
 .comment-image-container {
-    width: 12%;
+    width: 90px;
     height: 100%;
-    border-right: 1px solid #fbfbfb;
 }
 
 .single-comment .single-text{
-    width: 88%;
+    width: calc(100% - 90px);
     vertical-align: top;
     min-height: 90px;
+    border-left: 1px solid #fbfbfb;
 }
 
 .give-comment {
@@ -752,12 +771,30 @@ header {
     bottom: -19px;
     width: 185px;
     text-align: center;
-    left: 227px;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 
 /*Single question part*/
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 930px) {
+    .filter-bar {
+        margin-left: 75px;
+    }
+}
 
+@media screen and (max-width: 700px) {
+    .vote-count {
+        margin-right: 10px;
+    }
+    .vote-container {
+        width: 105px;
+    }
+    .single-detail {
+        width: calc(100% - 105px);
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
