@@ -256,11 +256,12 @@ header {
 
 
 .close-profile {
-    font-size: 16px;
+    font-size: 20px;
     font-weight:bold;
     position: absolute;
-    left: 780px;
+    right: 15px;
     top: 15px;
+    padding: 10px;
     color: #898b9c;
     cursor: pointer;
 }
@@ -268,8 +269,9 @@ header {
 .profile-popup {
     background-color: rgba(0, 0, 0, 0.7);
     width: 100%;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    /*padding-top: 25px;*/
+    /*padding-bottom: 25px;*/
+    padding: 25px;
     position: fixed;
     left: 0;
     top: 0;
@@ -277,7 +279,7 @@ header {
     overflow: auto;
 }
 .profile-wrapper {
-    width: 100%;
+    width: 800px;
     background-color: white;
     margin: 0 auto;
     padding: 50px 125px;
@@ -361,11 +363,11 @@ header {
 }
 
 .user-activity {
-    display: inline-flex;
     justify-content: center;
     width: 100%;
     margin-top: 30px;
     margin-bottom: 40px;
+    text-align: center;
 }
 
 .square {
@@ -374,6 +376,7 @@ header {
     background-color: #e5f5fd;
     margin: 10px;
     position: relative;
+    display: inline-block;
 }
 
 
@@ -512,10 +515,14 @@ header {
 }
 
 .hot-activities {
-    display: inline-flex;
-    justify-content: space-between;
     width: 100%;
     color: #40515b;
+    text-align: center;
+}
+
+.hot-activities h4 {
+    display: inline-block;
+    margin-right: 10px;
 }
 
 .hot-activities h4 span {
@@ -783,6 +790,10 @@ header {
     .filter-bar {
         margin-left: 75px;
     }
+    .profile-wrapper {
+        width: 100%;
+        padding: 50px 25px;
+    }
 }
 
 @media screen and (max-width: 700px) {
@@ -796,5 +807,19 @@ header {
         width: calc(100% - 105px);
         margin-left: 0;
         margin-right: 0;
+    }
+}
+
+
+@media screen and (max-width: 475px) {
+    .profile-activity {
+        display: block;
+        margin-bottom: 5px;
+    }
+    .profile-popup {
+        padding: 0;
+    }
+    .profile-navigation h2 {
+        font-size: 18px;
     }
 }
