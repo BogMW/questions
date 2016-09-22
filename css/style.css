@@ -645,7 +645,7 @@ header {
     text-align: center;
     line-height: 40px;
     cursor: pointer;
-    position: fixed;
+    position: absolute;
     left: 20px;
     top: 10px;
 }
