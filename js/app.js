@@ -41,6 +41,16 @@
 
         this.overflow = 'overflowYes';
 
+        this.hideActivities = function (count) {
+         return (count > 5)
+        }
+        this.setActivitiesLimit = function (count) {
+            if (count > 5) {
+                return 4;
+            } else {
+                return 5;
+            }
+        }
             });
 
 
@@ -158,6 +168,16 @@ var questions = [
               userId: 6,
               text: 'Learn PHP!',
               votes: 0
+          },
+          {
+              userId: 6,
+              text: 'Learn PHP!',
+              votes: 0
+          },
+          {
+              userId: 6,
+              text: 'Learn PHP!',
+              votes: 0
           }
       ],
         discussions: 5,
@@ -181,6 +201,21 @@ var questions = [
              userId: 4,
              text: 'Nop :(',
                 votes: 0
+            },
+            {
+                userId: 6,
+                text: 'Learn PHP!',
+                votes: 0
+            },
+            {
+                userId: 6,
+                text: 'Learn PHP!',
+                votes: 0
+            },
+            {
+                userId: 6,
+                text: 'Learn PHP!',
+                votes: 0
             }
         ],
         discussions: 3,
@@ -195,6 +230,11 @@ var questions = [
         votes: 99,
         date: '2013-01-26',
         activities: [
+            {
+                userId: 6,
+                text: 'Coffee!',
+                votes: 5
+            }
         ],
         discussions: 1,
         peers: 1,

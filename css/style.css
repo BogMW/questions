@@ -198,8 +198,47 @@ header {
     width: 84%;
     background-color: white;
     vertical-align: bottom;
+}
+.more-activities {
+    display: inline-block;
+    position: relative;
+    width: 90px;
+    height: 150px;
+    background-color: white;
+    margin-left: 15px;
+    cursor: pointer;
+    vertical-align: top;
+}
+.more-activities-count {
+    margin: 35px 10px 0 10px;
+    text-align: center;
+}
+.more-activities .comment-status {
+    font-size: 12px;
+    color: black;
+    border: none;
+    text-align: center;
+    margin: 45px 10px 10px 10px;
+    padding-top: 5px;
+    width: 70px;
+    vertical-align: bottom;
+    display: block;
+    font-style: italic;
+    font-weight: bold;
 
 }
+.more-activities .circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #a7a9ac;
+    position: absolute;
+    left: 40px;
+    bottom: -5px;
+}
+
+
+
 .comment {
     display: inline-block;
     position: relative;

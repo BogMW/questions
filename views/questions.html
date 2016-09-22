@@ -32,7 +32,12 @@
                         <div>ASKED</div>
                     </div>
                     <div class="comments" >
-                        <div ng-click="profile.showWho(comment.userId-1)" class="comment" ng-repeat="comment in question.activities | limitTo: 5">
+                        <div class="more-activities" ng-show="main.hideActivities(question.activities.length)">
+                            <div class="more-activities-count"> {{question.activities.length-4}} </div>
+                            <div class="comment-status">more activities</div>
+                            <div class="circle"></div>
+                        </div>
+                        <div ng-click="profile.showWho(comment.userId-1)" class="comment" ng-repeat="comment in question.activities | limitTo: main.setActivitiesLimit(question.activities.length)">
                             <img  ng-src="images/{{comment.userId}}.jpg" class="comment-photo">
                             <div class="comment-status">COMMENTED</div>
                             <div class="circle"></div>
