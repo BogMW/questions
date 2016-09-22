@@ -22,7 +22,7 @@
             <div class="left-bar">
                 <div class="top-bar">
                     <img  ng-click="profile.showWho(question.authorId-1)" ng-src="images/{{question.authorId}}.jpg"/>
-                    <div ng-click="profile.showWhat($index)" class="question">
+                    <div ng-click="profile.showWhat(question.authorId-1)" class="question">
                         <p><span>{{main.users[question.authorId-1].username}}</span> is asking</p>
                         <div>{{question.text}} ?</div>
                     </div>
