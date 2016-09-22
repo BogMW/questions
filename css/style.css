@@ -465,14 +465,14 @@ header {
 
 .joined-block{
     width: 100%;
-    display: inline-flex;
-    justify-content: center;
+    text-align: center;
     margin-bottom: 20px;
 }
 
 .joined-block>div {
     margin: 5px;
     cursor: pointer;
+    display: inline-block;
 }
 
 .joined-square {
@@ -560,6 +560,10 @@ header {
 
 /*Single question part*/
 
+.hidden-question {
+    display: none;
+}
+
 .back-to-questions {
     width: 40px;
     height: 40px;
@@ -600,7 +604,7 @@ header {
 .single-question-wrapper {
     width: 100%;
     padding-bottom: 100px;
-    background-color: #fbfbfb;
+    background-color: #f5f5f5;
 }
 
 .single-question {
@@ -809,6 +813,50 @@ header {
         margin-left: 0;
         margin-right: 0;
     }
+    .single-unfollow {
+        position: absolute;
+        left: 5px;
+        bottom: 40px;
+    }
+    .vote-container {
+        position: absolute;
+        right: 5px;
+        bottom: 15px;
+    }
+    .single-author {
+        min-height: auto;
+        padding: 5px;
+    }
+    .single-question .single-text {
+        width: 100%;
+        margin-left: 0;
+        padding: 5px 5px 70px 5px;
+    }
+    .single-question .single-detail {
+        margin: 0;
+        width: 100%;
+    }
+    .single-header h3{
+        display: none;
+    }
+    .add-question {
+        margin-right: 10px;
+    }
+    .question h3 {
+        display: none;
+    }
+    .hidden-question {
+        width: 100%;
+        font-size: 12px;
+        font-style: italic ;
+        font-weight: bold;
+        color: #0266b3;
+        background-color: #dff3fd;
+        display: block;
+        padding: 5px;
+        text-align: center;
+        border-top: 1px solid white ;
+    }
 }
 
 
@@ -823,4 +871,5 @@ header {
     .profile-navigation h2 {
         font-size: 18px;
     }
+
 }
