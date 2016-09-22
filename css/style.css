@@ -568,6 +568,12 @@ header {
     display: none;
 }
 
+.commentator-name {
+    color: #0266b3;
+}
+.hidden-status {
+    color: black;
+}
 
 .back-to-questions {
     width: 40px;
@@ -847,7 +853,7 @@ header {
     .add-question {
         margin-right: 10px;
     }
-    .question h3, .single-answer .single-detail div {
+    .question h3, .single-answer .single-detail div, .single-comment .single-detail .comment-to-hide {
         display: none;
     }
     .hidden-question {
@@ -886,8 +892,17 @@ header {
     }
     .single-answer-container div img {
         margin: 10px auto;
-
     }
+    .single-comment-container {
+        padding-left: 10px;
+    }
+    .hidden-status {
+
+        font-size: 10px;
+        font-weight: bold;
+        color: black;
+    }
+
 }
 
 

@@ -75,8 +75,8 @@
                 </div>
                 <div class="single-text">
                     <div class="single-detail">
-                        <div>{{profile.users[comment.authorId-1].username}}</div>
-                        <div>{{comment.text}}</div>
+                        <div class="commentator-name">{{profile.users[comment.authorId-1].username}}  <span class="hidden-status">COMMENTED IT - yesterday</span> </div>
+                        <div class="comment-to-hide">{{comment.text}}</div>
                     </div>
                     <div class="vote-container">
                         <div class="vote-count">{{comment.votes}} upvotes</div>
@@ -89,6 +89,7 @@
                 <div class="give-comment" ng-show="$last">
                     CONTINUE discussion
                 </div>
+                <div class="hidden-comment"> {{comment.text}} </div>
             </div>
         </div>
 
