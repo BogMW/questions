@@ -564,6 +564,11 @@ header {
     display: none;
 }
 
+.hidden-comment {
+    display: none;
+}
+
+
 .back-to-questions {
     width: 40px;
     height: 40px;
@@ -716,7 +721,7 @@ header {
 .single-answer-container .single-text {
     width: calc(100% - 90px);
     vertical-align: top;
-    min-height: 90px;
+    /*min-height: 90px;*/
     border-left:1px solid #fbfbfb ;
 }
 
@@ -842,7 +847,7 @@ header {
     .add-question {
         margin-right: 10px;
     }
-    .question h3 {
+    .question h3, .single-answer .single-detail div {
         display: none;
     }
     .hidden-question {
@@ -856,6 +861,32 @@ header {
         padding: 5px;
         text-align: center;
         border-top: 1px solid white ;
+    }
+    .hidden-comment {
+        display: block;
+        width: 100%;
+        font-size: 14px;
+        background-color: white;
+        color: #898b93;
+        padding: 10px 5px 70px 10px;
+        border-top: 1px solid #f6f6f6;
+    }
+    .single-answer .single-detail {
+        width: 100%;
+        padding: 30px 10px 10px 10px;
+        margin: 0;
+    }
+    .single-answer .single-detail p{
+        font-size: 10px;
+        font-weight: bolder;
+    }
+    .single-answer .single-detail p span{
+        font-size: 12px;
+        font-weight: bold;
+    }
+    .single-answer-container div img {
+        margin: 10px auto;
+
     }
 }
 

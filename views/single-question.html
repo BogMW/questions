@@ -65,7 +65,9 @@
             <div class="give-answer" ng-show="!answer.comments.length">
                 COMMENT
             </div>
+            <div class="hidden-comment"> {{profile.questions[profile.questionToShow].activities[$index].text}} </div>
         </div>
+
         <div class="single-comment-container" ng-repeat="comment in answer.comments">
             <div class="single-comment">
                 <div class="comment-image-container">
