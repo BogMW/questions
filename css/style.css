@@ -233,7 +233,9 @@ header {
     border-radius: 50%;
     background-color: #a7a9ac;
     position: absolute;
-    left: 40px;
+    left: 0;
+    right: 0;
+    margin: auto;
     bottom: -5px;
 }
 
@@ -278,7 +280,9 @@ header {
     border-radius: 50%;
     background-color: #a7a9ac;
     position: absolute;
-    left: 40px;
+    left: 0;
+    right: 0;
+    margin: auto;
     bottom: -5px;
 }
 .right-bar {
@@ -897,7 +901,9 @@ header {
         font-size: 12px;
         text-align: center;
     }
-
+    .comments>div {
+        margin-left: 0;
+    }
 
     .vote-count {
         margin-right: 10px;
@@ -992,7 +998,28 @@ header {
 }
 
 
-@media screen and (max-width: 475px) {
+@media screen and (max-width: 525px) {
+    .questions {
+        padding-bottom: 20px;
+    }
+    .left-bar .comments>div {
+        width: 60px;
+    }
+    .left-bar .comments .comment-status {
+        margin: 0;
+        width: 60px;
+        font-size: 9px;
+    }
+    .comment .comment-photo {
+        margin: 20px auto 15px;
+    }
+    .comments>div {
+        height: 110px;
+    }
+    .bottom-bar {
+        height: auto;
+        margin-bottom: 30px;
+    }
     .profile-activity {
         display: block;
         margin-bottom: 5px;
