@@ -73,11 +73,16 @@ header {
 .filter {
     margin-right: 60px;
 }
-.filter-bar div{
+.filter-bar>div{
     display: inline-block;
     line-height: 25px;
 }
-
+.filter-container .filter>div {
+    display: inline-block;
+}
+.filter-container>div, .logo-container>div {
+    display: inline-block;
+}
 
 .sort span {
     font-style: italic;
@@ -86,6 +91,7 @@ header {
     color: #026eb3;
     font-weight: bold;
     cursor: pointer;
+    display: inline-block;
 }
 .active-sort {
     color: #aab0af !important;
@@ -866,7 +872,7 @@ header {
 
 
 @media screen and (max-width: 930px) {
-    .filter-bar {
+    .single-questions .filter-bar {
         margin-left: 75px;
     }
     .profile-wrapper {
@@ -882,9 +888,22 @@ header {
         justify-content: space-around;
         margin-top: 10px;
     }
+    .filter-bar .add-question {
+        margin-right: 85px;
+    }
 }
 
 @media screen and (max-width: 700px) {
+    .filter-bar {
+        padding: 0 20px;
+    }
+    .logo-container {
+        display: inline-flex;
+        justify-content: space-between;
+    }
+    .filter-container {
+        margin-top: 20px;
+    }
     .left-bar, .right-bar {
         display: block;
         width: 100%;
@@ -999,6 +1018,26 @@ header {
 
 
 @media screen and (max-width: 525px) {
+    .logo-container, .filter-container {
+        display: inline-flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .filter-container {
+        font-size: 14px;
+    }
+    .filter-container .filter>div {
+        display: block;
+    }
+    .filter-bar .add-question {
+        margin-right: 25px;
+    }
+    .filter-bar>div {
+        display: flex;
+    }
+    .filter-bar .filter {
+        margin-right: 25px;
+    }
     .questions {
         padding-bottom: 20px;
     }
