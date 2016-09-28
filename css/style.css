@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Open Sans', arial;
+    font-family: 'Dosis', sans-serif;
     font-stretch: condensed;
 }
 body {
@@ -86,6 +86,7 @@ header {
 
 .sort span {
     font-style: italic;
+    font-family: 'Droid Serif', serif;
 }
 .sort div {
     color: #026eb3;
@@ -173,6 +174,7 @@ header {
     font-style: italic;
     line-height: 14px;
     font-size: 14px;
+    font-family: 'Droid Serif', serif;
 }
 .bottom-bar {
     width: 100%;
@@ -231,6 +233,7 @@ header {
     display: block;
     font-style: italic;
     font-weight: bold;
+    font-family: 'Droid Serif', serif;
 
 }
 .more-activities .circle {
@@ -299,6 +302,7 @@ header {
 }
 .right-bar p span {
     font-style: italic;
+    font-family: 'Droid Serif', serif;
 }
 .load-more {
     width: 100%;
@@ -337,8 +341,6 @@ header {
 .profile-popup {
     background-color: rgba(0, 0, 0, 0.7);
     width: 100%;
-    /*padding-top: 25px;*/
-    /*padding-bottom: 25px;*/
     padding: 25px;
     position: fixed;
     left: 0;
@@ -354,8 +356,6 @@ header {
     padding: 50px 125px;
     position: relative;
 }
-
-
 
 .profile-header {
     width: 100%;
@@ -387,10 +387,6 @@ header {
 .profile-activity h3 span {
     font-style: normal;
     color: black;
-}
-
-.profile-content {
-
 }
 
 .profile-navigation {
@@ -428,10 +424,6 @@ header {
     cursor: pointer;
 }
 
-.profile-navigation>h2 {
-
-}
-
 .user-activity {
     justify-content: center;
     width: 100%;
@@ -448,7 +440,6 @@ header {
     position: relative;
     display: inline-block;
 }
-
 
 .square > div {
     position: absolute;
@@ -749,6 +740,7 @@ header {
     margin-right: 30px;
     vertical-align: top;
     margin-top: 15px;
+    font-family: 'Droid Serif', serif;
 }
 
 .vote-container {
@@ -971,6 +963,7 @@ header {
         width: 100%;
         font-size: 12px;
         font-style: italic ;
+        font-family: 'Droid Serif', serif;
         font-weight: bold;
         color: #0266b3;
         background-color: #dff3fd;
